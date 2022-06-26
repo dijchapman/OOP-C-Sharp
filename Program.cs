@@ -8,6 +8,9 @@ namespace workout_OOP {
             Trainer tonyStark = new Trainer("Tony", "Stark");
             peterParker.aboutMe();
             tonyStark.aboutMe();
+
+            Exercise benchPress = new Exercise("Bench Press", "Chest");
+            benchPress.exerciseDetails();
         }
     }
 }
