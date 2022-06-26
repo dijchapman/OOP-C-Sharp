@@ -9,6 +9,10 @@ namespace workout_OOP {
             peterParker.aboutMe();
             tonyStark.aboutMe();
 
+            DateTime workoutDateTime = new DateTime(2022, 6, 30, 10, 30, 0);
+            Workout workout = new Workout(peterParker, tonyStark, workoutDateTime, 60);
+            workout.workoutDetails();
+
             Exercise benchPress = new Exercise("Bench Press", "Chest");
             benchPress.exerciseDetails();
         }
