@@ -5,12 +5,14 @@ public class Workout {
     private Trainer _trainer;
     private DateTime _dateAndTime;
     private int _duration;
+    private Exercise[] _exercises;
 
-    public Workout(Client c, Trainer t, DateTime dateTime, int duration) {
+    public Workout(Client c, Trainer t, DateTime dateTime, int duration, Exercise[] exercises) {
         this._client = c;
         this._trainer = t;
         this._dateAndTime = dateTime;
         this._duration = duration;
+        this._exercises = exercises;
     }
 
     public void workoutDetails() {
@@ -40,6 +42,11 @@ public class Workout {
 
     protected void startExercises() {
         Console.WriteLine("We will start performing the prescribed exercises for the session.");
+        foreach (Exercise exercise in _exercises) {
+            exercise.exerciseDetails();
+            exercise.exerciseSetDetails();
+            Console.WriteLine();
+        }
     }
 
     protected void cooldownRoutine() {
