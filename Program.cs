@@ -11,11 +11,16 @@ namespace workout_OOP {
 
             DateTime workoutDateTime = new DateTime(2022, 6, 30, 10, 30, 0);
             Workout workout = new Workout(peterParker, tonyStark, workoutDateTime, 60);
-            workout.workoutDetails();
-            workout.performWorkout();
+            // workout.workoutDetails();
+            // workout.performWorkout();
 
-            Exercise benchPress = new Exercise("Bench Press", "Chest");
-            // benchPress.exerciseDetails();
+            ExerciseSet[] sets = new ExerciseSet[3];
+            sets[0] = new ExerciseSet(8, 145, "lb", 3);
+            sets[1] = new ExerciseSet(6, 165, "lb", 4);
+            sets[2] = new ExerciseSet(4, 185, "lb", 5);
+            Exercise benchPress = new Exercise("Bench Press", "Chest", sets);
+            benchPress.exerciseDetails();
+            benchPress.exerciseSetDetails();
         }
     }
 }
